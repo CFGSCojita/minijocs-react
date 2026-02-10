@@ -2,8 +2,8 @@
 // Creamos un array de palabras en catalán:
 export const paraules = [
     'CONSOLA',
-    'TECLAT',
+    'JUGADOR',
     'GRAFICA',
     'NIVELLS',
-    'MISSIONS'
+    'CONTROL'
 ];
