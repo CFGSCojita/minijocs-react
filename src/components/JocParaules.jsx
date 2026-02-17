@@ -13,6 +13,7 @@ export default function JocParaules() {
   const [puntos, setPuntos] = useState(0);
   const [indicePalabra, setIndicePalabra] = useState(0);
   const [input, setInput] = useState('');
+  const [mensajeError, setMensajeError] = useState('');
 
   // Obtenemos el objeto actual del array (contiene 'paraula' y 'pista'):
   const actual = paraules[indicePalabra];
@@ -20,14 +21,38 @@ export default function JocParaules() {
   // Creamos una función para comprobar el resultado del input y manejar la lógica del juego de palabras:
   function comprovar() {
     // Estructura de control 'if'.
-    // Si la longitud del input no coincide con la longitud de la palabra correcta, no hacemos nada.
-    if (input.length !== actual.paraula.length) {
-      return;
+    // Si la longitud del input no coincide con la longitud de la palabra correcta, mostramos error, restamos intento y limpiamos.
+    if (input.length > actual.paraula.length) {
+      setMensajeError('Massa lletres!');
+      setIntentosRestantes(intentosRestantes - 1); // Restamos un intento.
+      setInput(''); // Limpiamos el input.
+      
+      // Estructura de control 'if'.
+      // Si no quedan intentos, terminamos el juego:
+      if (intentosRestantes === 1) {
+        localStorage.setItem('punts', puntos);
+        navigate('/resultat');
+      }
+      return; // Detenemos aquí, NO avanzamos a la siguiente palabra
+    } else if (input.length < actual.paraula.length) {
+      setMensajeError('Falten lletres!');
+      setIntentosRestantes(intentosRestantes - 1); // Restamos un intento.
+      setInput(''); // Limpiamos el input.
+      
+      // Estructura de control 'if'.
+      // Si no quedan intentos, terminamos el juego:
+      if (intentosRestantes === 1) {
+        localStorage.setItem('punts', puntos);
+        navigate('/resultat');
+      }
+      return; // Detenemos aquí, NO avanzamos a la siguiente palabra
     }
 
+    // Si llegamos aquí, la longitud es correcta, así que limpiamos cualquier error previo:
+    setMensajeError('');
+
     // Estructura de control 'if'.
-    // Si la longitud es válida (pueden ser minúsculas o mayúsculas), compararemos el input convertido con la palabra correcta, cuando la respuesta es correcta,
-    // sumamos puntos. En caso contrario, restamos intentos:
+    // Comparamos el input con la palabra correcta. Si es correcta, sumamos puntos y avanzamos. Si no, restamos intentos:
     if (input.toUpperCase() === actual.paraula) {
       setPuntos(puntos + 2); // Incrementamos dos puntos al estar correcta.
       
@@ -43,6 +68,8 @@ export default function JocParaules() {
         navigate('/resultat'); // Navegamos a la página de resultados.
       }
     } else {
+      // La longitud es correcta pero la palabra es incorrecta:
+      setMensajeError('Paraula incorrecta!');
       setIntentosRestantes(intentosRestantes - 1); // Decrementamos un intento.
 
       // Estructura de control 'if'.
@@ -55,10 +82,17 @@ export default function JocParaules() {
     } 
   }
 
+  // Creamos una función para manejar el cambio en el input:
+  function handleInputCambiar(e) {
+    setInput(e.target.value); // Actualizamos el valor del input.
+    setMensajeError(''); // Limpiamos el error cada vez que el usuario escribe.
+  }
+
   return (
     <div>
       <Header />
       <h2>Joc de Paraules</h2>
+      <h3>Paraula {indicePalabra + 1} de {paraules.length}</h3>
       
       {/* Mostramos la pista al usuario: */}
       <p>Pista: {actual.pista}</p>
@@ -71,10 +105,13 @@ export default function JocParaules() {
       <input 
         type="text"
         value={input}
-        onChange={(e) => setInput(e.target.value)} 
+        onChange={handleInputCambiar}
         placeholder="Escriu la paraula..."
       />
       <button onClick={comprovar}>Comprovar Resposta</button>
+      
+      {/* Mostramos el mensaje de error si existe: */}
+      {mensajeError && <p style={{ color: '#FF3366', fontWeight: 'bold' }}>{mensajeError}</p>}
       
       <p>Intents restants: {intentosRestantes}</p>
       <p>Punts: {puntos}</p>
