@@ -33,6 +33,8 @@ export default function Questionari() {
 
   return (
     <div>
+      <h2>Questionari de Preguntes</h2>
+      <h3>Selecciona la resposta correcta:</h3>
       <p>Pregunta {indexPregunta + 1} de {preguntes.length}</p>
       <h2>{preguntaActual.pregunta}</h2>
       

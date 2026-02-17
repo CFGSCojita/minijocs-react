@@ -92,7 +92,8 @@ export default function JocParaules() {
     <div>
       <Header />
       <h2>Joc de Paraules</h2>
-      <h3>Paraula {indicePalabra + 1} de {paraules.length}</h3>
+      <h3>Adivina la paraula corresponent!</h3>
+      <p>Paraula {indicePalabra + 1} de {paraules.length}</p>
       
       {/* Mostramos la pista al usuario: */}
       <p>Pista: {actual.pista}</p>
