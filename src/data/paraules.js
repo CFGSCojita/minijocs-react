@@ -1,9 +1,24 @@
 
-// Creamos un array de palabras en catalán:
+// Creamos un array de objetos con palabras en catalán y sus pistas:
 export const paraules = [
-    'CONSOLA',
-    'JUGADOR',
-    'GRAFICA',
-    'NIVELLS',
-    'CONTROL'
+    {
+        paraula: 'CONSOLA',
+        pista: 'Dispositiu per jugar a videojocs a casa'
+    },
+    {
+        paraula: 'JUGADOR',
+        pista: 'Persona que juga a videojocs'
+    },
+    {
+        paraula: 'GRAFICA',
+        pista: 'Component que renderitza imatges en un PC'
+    },
+    {
+        paraula: 'NIVELLS',
+        pista: 'Etapes que has de superar en un joc'
+    },
+    {
+        paraula: 'CONTROL',
+        pista: 'El tens a les mans per jugar'
+    }
 ];
