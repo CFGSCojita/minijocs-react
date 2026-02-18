@@ -36,7 +36,7 @@ export default function Questionari() {
             <Header />
             <div className="questionari-main">
                 <h2>Questionari de Preguntes</h2>
-                <h3>Tria una resposta correcta!</h3>
+                <h3 className="underline">Tria una resposta correcta!</h3>
                 <p className="badge-pregunta">Pregunta {indexPregunta + 1} de {preguntes.length}</p>
                 <h2>{preguntaActual.pregunta}</h2>
 

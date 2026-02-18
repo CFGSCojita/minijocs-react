@@ -8,13 +8,13 @@
   text-align: center;
 }
 
-.questionari-contenedor .questionari-main h2 {
+.questionari-contenedor .questionari-main .questionari-main h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
   color: #fcfcfc;
 }
 
-.questionari-contenedor .questionari-main h3 {
+.questionari-contenedor .questionari-main .questionari-main h3 {
   text-decoration: underline;
 }
 

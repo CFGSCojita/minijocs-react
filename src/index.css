@@ -13,3 +13,18 @@ body {
   color: var(--blanc);
   font-family: 'Poppins', sans-serif;
 }
+
+h1 { 
+  font-size: 2rem; 
+  font-weight: bold; 
+}
+
+h2 { 
+  font-size: 1.5rem; 
+  font-weight: bold; 
+}
+
+h3 { 
+  font-size: 1.2rem; 
+  font-weight: 600; 
+}

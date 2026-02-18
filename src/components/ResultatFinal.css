@@ -1,0 +1,68 @@
+
+/* Contenedor entero de resultado */
+.resultat-contenedor {
+    background-color: #0A0A0A;
+    min-height: 100vh;
+}
+
+/* Contenedor main */
+.resultat-main {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.resultat-main h1 {
+    font-size: 2.5rem;
+}
+
+.resultat-main h2 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    text-decoration: underline;
+}
+
+/* Tabla de premios */
+.resultat-main table {
+    margin: 1.5rem auto;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #E6E6E6; 
+    border-collapse: collapse; 
+}
+
+.resultat-main th {
+    background-color: #FF3366;
+    color: #FCFCFC;
+    padding: 0.75rem 1rem;
+    border: 1px solid #E6E6E6; 
+}
+
+.resultat-main td {
+    border: 1px solid #E6E6E6;
+    padding: 0.75rem 1rem;
+    color: #FCFCFC;
+}
+
+/* Puntos */
+.resultat-punts {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: #FCFCFC;
+}
+
+.resultat-punts span {
+    color: #00CCFF;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.resultat-missatge {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #FF3366;
+    border-radius: 0.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #E6E6E6;
+}
