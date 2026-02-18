@@ -1,0 +1,37 @@
+
+/* Contenedor Home */
+.home-contenedor {
+    background-color: #0A0A0A;
+    min-height: 100vh;
+}
+
+.home-main {
+    padding: 3rem 2rem;
+    text-align: center;
+    color: #FCFCFC;
+}
+
+/* Grid de minijuegos */
+.jocs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Minijuegos */
+.joc-card {
+    background-color: #1A1A1A;
+    color: #FCFCFC;
+    font-size: 1.5rem;
+    border: 1px solid #FF3366;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.joc-card:hover {
+    color: #00CCFF;
+    border-color: #00CCFF;
+}
