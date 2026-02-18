@@ -3,7 +3,7 @@
 export const paraules = [
     {
         paraula: 'CONSOLA',
-        pista: 'Dispositiu per jugar a videojocs a casa'
+        pista: 'Dispositiu per jugar videojocs a casa'
     },
     {
         paraula: 'JUGADOR',
