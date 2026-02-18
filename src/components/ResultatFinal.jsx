@@ -1,5 +1,5 @@
 import Header from "./Header";
-import "./ResultatFinal.css";
+import "../styles/ResultatFinal.css";
 
 export default function ResultatFinal() {
     // Declaramos una variable donde almacenamos los puntos obtenidos, recuperándolos del localStorage. Si no hay puntos almacenados, asignaremos un valor de 0.

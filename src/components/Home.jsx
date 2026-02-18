@@ -1,7 +1,7 @@
 // Importamos el 'useNavigate' de React Router, el Header y el fichero CSS:
 import { useNavigate } from "react-router-dom"
 import Header from "./Header"
-import './Home.css'
+import '../styles/Home.css'
 
 export default function Home() {
 

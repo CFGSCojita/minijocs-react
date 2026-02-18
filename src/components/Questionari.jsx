@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { preguntes } from "../data/preguntes";
-import "./Questionari.scss";
+import "../styles/Questionari.scss";
 import Header from "./Header";
 
 export default function Questionari() {

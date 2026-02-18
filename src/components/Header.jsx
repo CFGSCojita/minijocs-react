@@ -1,6 +1,6 @@
 // Importamos 'Link' de React Router, el fichero CSS y el logo:
 import { Link } from "react-router-dom";
-import "./Header.css";
+import "../styles/Header.css";
 import logo from "../assets/img/logo-black-removebg-preview.webp";
 
 export default function Header() {
